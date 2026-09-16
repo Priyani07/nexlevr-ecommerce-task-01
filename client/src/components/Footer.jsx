@@ -1,0 +1,1 @@
+export default function Footer(){return <footer><strong>Nexlevr</strong><span>Level 02 Full-Stack E-Commerce Project</span></footer>}
