@@ -31,5 +31,47 @@ Backend: http://localhost:5000
 
 Frontend: http://localhost:5173
 
-## Important
-Do not commit `.env` files or secrets. The checkout uses demo payment status and does not process real money.
+## CI/CD Pipeline
+
+This project uses GitHub Actions to automate continuous integration
+and continuous deployment.
+
+### Pipeline Flow
+
+Code Push
+    ↓
+GitHub Actions
+    ↓
+Checkout
+    ↓
+Node.js Setup
+    ↓
+Install Dependencies
+    ↓
+Backend Validation
+    ↓
+Frontend Build
+    ↓
+Deployment
+    ↓
+Live Application
+
+### Continuous Integration
+
+The CI pipeline automatically runs whenever changes are pushed
+to the main branch or a pull request targets main.
+
+### The pipeline:
+- Checks out the source code
+- Sets up Node.js
+- Installs frontend dependencies
+- Builds the React frontend
+- Installs backend dependencies
+- Validates the Node.js backend
+
+### Benefits
+- Automated validation
+- Consistent builds
+- Reduced manual deployment work
+- Early detection of build errors
+- Repeatable deployment process
